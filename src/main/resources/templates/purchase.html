@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<meta charset="ISO-8859-1">
+	<title>purchase</title>
+	<style>
+		body {
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: 0px auto;
+			border: 1px solid #ccc;
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		table {
+			width: 100%;
+			text-align: center;
+			background-color: #fff;
+			/* border-radius: 10px;
+                padding: 20px;
+                border: 2px solid #ccc;
+                 */
+		}
+
+		.button {
+			width: 75%;
+			background-color: #3498db;
+			border: none;
+			margin: 5px 0px;
+			padding: 6px;
+			border-radius: 10px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			cursor: pointer;
+		}
+
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+
+		tr {
+			background-color: #f2f2f2;
+		}
+	</style>
+
+</head>
+
+<body>
+	<h1>Welcome to MostWonderfull Corses section in the world..!</h1>
+	<div class="container">
+		<form action="/payment" method="get">
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">course_id</th>
+						<th scope="col">course_name</th>
+						<th scope="col">course_price</th>
+						<th scope="col">Buy</th>
+					</tr>
+				</thead>
+				<tbody>
+
+					<tr th:each="clist:${clist}">
+
+						<td th:text="${clist.course_id}"></td>
+						<td th:text="${clist.course_name}"></td>
+						<td th:text="${clist.course_price}"></td>
+
+					</tr>
+
+				</tbody>
+
+			</table>
+
+		</form>
+	</div>
+</body>
+
+</html>

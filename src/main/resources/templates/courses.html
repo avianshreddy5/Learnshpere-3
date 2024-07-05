@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+
+<body>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">course_id</th>
+				<th scope="col">course_name</th>
+				<th scope="col">course_price</th>
+				<th scope="col">lessions</th>
+			</tr>
+		</thead>
+		<tbody>
+
+			<tr th:each="courselist:${clist}">
+
+				<td th:text="${courselist.course_id}"></td>
+				<td th:text="${courselist.course_name}"></td>
+				<td th:text="${courselist.course_price}"></td>
+				<td th:text="${courselist.lession}"></td>
+
+			</tr>
+
+		</tbody>
+
+	</table>
+
+</body>
+
+</html>

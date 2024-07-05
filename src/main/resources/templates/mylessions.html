@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+
+	<title>welcome to lession page</title>
+	<style>
+		body {
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+		}
+
+		.container {
+			max-width: 600px;
+			margin: 0px auto;
+			border: 1px solid #ccc;
+			padding: 10px;
+			border-radius: 10px;
+		}
+
+		table {
+			width: 100%;
+			text-align: center;
+			background-color: #fff;
+			/* border-radius: 10px;
+                padding: 20px;
+                border: 2px solid #ccc;
+                 */
+		}
+
+		.button {
+			width: 75%;
+			background-color: #3498db;
+			border: none;
+			margin: 5px 0px;
+			padding: 6px;
+			border-radius: 10px;
+			font-weight: bold;
+			color: rgb(255, 255, 255);
+			cursor: pointer;
+		}
+
+		th {
+			background-color: #4CAF50;
+			color: white;
+		}
+
+		tr {
+			background-color: #f2f2f2;
+		}
+	</style>
+
+</head>
+
+
+
+<body>
+	<div>
+		<table class="table table-success table-striped table-bordered w-50">
+			<thead>
+				<tr>
+					<th scope="col">Lession_id</th>
+					<th scope="col">lession_name</th>
+					<th scope="col">lession_topics</th>
+					<th scope="col">lession_link</th>
+					<th scope="col">course_id</th>
+
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr th:each="lessionlist:${lessionlist}">
+
+					<td th:text="${lessionlist.lession_id}"></td>
+					<td th:text="${lessionlist.lession_name}"></td>
+					<td th:text="${lessionlist.topic}"></td>
+					<td th:text="${lessionlist.link}"></td>
+					<td th:text="${lessionlist.Course.course_id}"></td>
+
+				</tr>
+			</tbody>
+
+		</table>
+	</div>
+
+
+
+</body>
+
+</html>

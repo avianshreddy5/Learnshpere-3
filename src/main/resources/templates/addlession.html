@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>creation of course</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f4f4f4;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			max-width: 400px;
+			margin: 20px auto;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+		}
+
+		input[type="text"],
+		select {
+			width: 100%;
+			padding: 8px;
+			margin-bottom: 10px;
+			box-sizing: border-box;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 15px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			width: 100%;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="container">
+		<h2>lessions Form</h2>
+
+		<form action="/addlession" method="post">
+			<label for="course_id">course_id:</label>
+			<input type="text" id="course_id" name="course_id" required><br>
+
+			<label for="lession_id">lession_id:</label>
+			<input type="text" id="lession_id" name="lession_id" required><br>
+			<label for="lession_name">lession_name:</label>
+			<input type="text" id="lession_name" name="lession_name" required><br>
+			<label for="lession_topic">lession_topic:</label>
+			<input type="text" id="lession_topic" name="topic" required><br>
+
+			<label for="lession_link">lession_link:</label>
+			<input type="text" id="lession_link" name="link" required><br>
+
+
+
+
+			<input type="submit" value="addlession">
+
+		</form>
+	</div>
+</body>
+
+</html>
